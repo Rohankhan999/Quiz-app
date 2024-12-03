@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Quiz App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    .quiz-container {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .options {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .options label {
+      display: block;
+      margin: 5px 0;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:disabled {
+      background-color: #ccc;
+    }
+    #result {
+      font-size: 20px;
+      font-weight: bold;
+      color: green;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Basic Quiz App</h1>
+    <div id="question-box" class="question"></div>
+    <div id="options-box" class="options"></div>
+    <button id="submit-btn" class="btn">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    // Questions as a simple array of objects
+    var questions = [
+      {
+        question: "What does HTML stand for?",
+        options: [
+          "Hyper Text Markup Language",
+          "Home Tool Markup Language",
+          "Hyperlinks and Text Markup Language",
+          "Hyper Tool Machine Language"
+        ],
+        correctAnswer: "Hyper Text Markup Language"
+      },
+      {
+        question: "Which HTML tag is used to define a hyperlink?",
+        options: ["a", "link", "href", "hyperlink","rohan"],
+        correctAnswer: "<a>"
+      }
+    ];
+
+    // Variables to keep track of state
+    var currentQuestionIndex = 0;
+    var score = 0;
+
+    // DOM elements
+    var questionBox = document.getElementById("question-box");
+    var optionsBox = document.getElementById("options-box");
+    var submitBtn = document.getElementById("submit-btn");
+    var resultBox = document.getElementById("result");
+
+    // Function to render a question
+    function renderQuestion() {
+      // Clear previous content
+      questionBox.innerHTML = "";
+      optionsBox.innerHTML = "";
+
+      // Get the current question
+      var question = questions[currentQuestionIndex];
+
+      // Display the question
+      questionBox.textContent = question.question;
+
+      // Display the options
+      for (var i = 0; i < question.options.length; i++) {
+        var option = question.options[i];
+        optionsBox.innerHTML +=
+          '<label><input type="radio" name="option" value="' + option + '"> ' + option + '</label>';
+      }
+    }
+
+    // Function to check the answer
+    function checkAnswer() {
+      var selectedOption = document.querySelector('input[name="option"]:checked');
+
+      // If no option is selected
+      if (!selectedOption) {
+        alert("Please select an option!");
+        return;
+      }
+
+      // Check if the selected option is correct
+      if (selectedOption.value === questions[currentQuestionIndex].correctAnswer) {
+        score++;
+      }
+
+      // Move to the next question
+      currentQuestionIndex++;
+
+      // If there are more questions, render the next question
+      if (currentQuestionIndex < questions.length) {
+        renderQuestion();
+      } else {
+        // Otherwise, show the final result
+        showResult();
+      }
+    }
+
+    // Function to show the result
+    function showResult() {
+      questionBox.style.display = "none";
+      optionsBox.style.display = "none";
+      submitBtn.style.display = "none";
+      resultBox.innerHTML = "You scored " + score + " out of " + questions.length + "!";
+    }
+
+    // Add event listener to the submit button
+    submitBtn.addEventListener("click", checkAnswer);
+
+    // Initialize the quiz
+    renderQuestion();
+  </script>
+</body>
+</html>
