@@ -1,5 +1,5 @@
 var NAME = prompt('Enter your Name!')
-document.querySelector('#prompt').innerHTML = "Hello " + " " + NAME.toUpperCase() + " " +  "Welcome!"
+document.querySelector('#prompt').innerHTML = "Welcome!" + " " + NAME.toUpperCase("") + " " + "to"  ;
 function Html() {
     // window.location.href = 'htmlpage.html'
     window.open('htmlpage.html')
@@ -16,6 +16,5 @@ var Quiz = [
         correctAnswer : "b"
     },
 ]
-Quiz.innerHTML = `<h1>${Quiz}<h1>` +
-"<br>"
+
 
