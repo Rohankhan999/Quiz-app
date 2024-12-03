@@ -19,20 +19,50 @@ p{
     letter-spacing: 2px;
     
 }
-.quizSection{
-    background-color: rgb(77, 40, 77);
-    width:800px;
-    height: 400px;
-    border-radius: 20px;
-    margin: auto;
-    margin-top: 80px;
+#sectionHeading{
+    margin-top:3px;
+    color: #fefefe;
 }
-h2{ 
-    color:whitesmoke; 
+.quiz-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(144, 167, 163, 0.568);
+    margin-top: 50px;
+    font-family: "Sour Gummy", serif;
+    font-weight: 600;
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .options {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .options label {
+    display: block;
+    margin: 5px 0;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Sour Gummy", serif;
+  }
+  .btn:disabled {
+    background-color: #ccc;
+  }
+  #result {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(152, 253, 152);
+    margin-top: 20px;
     text-align: center;
     font-family: "Sour Gummy", serif;
-     letter-spacing: 3px;
-     font-size: 44px;
-     padding-top: 30px;
-    }
+  }
    
