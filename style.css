@@ -121,7 +121,7 @@ ul li {
     nav{
         text-align: center;
         display: flex;
-        flex-direction:column;
+        flex-direction:row;
     }
     section{
         width:100%;
