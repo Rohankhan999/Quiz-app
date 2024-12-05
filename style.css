@@ -96,6 +96,9 @@ ul li {
         background-color:black;
         text-align: center;
     }
+    img{
+       margin-left: 200px; 
+    }
     #navigation{
         display: flex;
         flex-direction: column;
