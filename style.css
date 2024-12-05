@@ -155,7 +155,7 @@ ul li {
     }
 
     .box {
-        width: 90%;
+        width:400px;
         height:40px;
         font-size: 14px;
         margin: 10px auto;
@@ -183,8 +183,9 @@ ul li {
         margin-right: 200px;
     }
     #click{
-        margin-top:7px;
-        margin-left:90px;
+        /* margin-top:7px;
+        margin-left:90px; */
+        text-align: center;
     
     }
 }
