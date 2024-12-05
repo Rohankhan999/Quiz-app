@@ -1,4 +1,4 @@
-var questions = [
+questions = [ 
   {
     question: "What does HTML stand for?",
     options: ["Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Hyper Tool Machine Language"],
@@ -80,7 +80,7 @@ var questions = [
     correctAnswer: "ol"
   },
   {
-    question: "What does the `<em>` tag do?",
+    question: "What does the <em> tag do?",
     options: ["Italicize text", "Bold text", "Underline text", "Highlight text"],
     correctAnswer: "Italicize text"
   },
@@ -132,42 +132,36 @@ var questions = [
   }
 ];
 
-var questionBox = document.getElementById("question-box");
-var optionsBox = document.getElementById("options-box");
-var resultBox = document.getElementById("result");
-var submitBtn = document.getElementById("submit-btn");
+var QuestionBox = document.querySelector('#question-box');
+var optionBox = document.querySelector('#options-box');
+var submitButton = document.querySelector('#submit-btn');
+var Result = document.querySelector('#result');
 
 var currentQuestionIndex = 0;
-var score = 0;
+var Score = 0;
 
-// Render the question
 function renderQuestion() {
   var currentQuestion = questions[currentQuestionIndex];
-  questionBox.textContent = currentQuestion.question;
+  QuestionBox.innerText = currentQuestion.question;
 
-  // Static HTML for options
-  optionsBox.innerHTML =
+  optionBox.innerHTML =
     '<label><input type="radio" name="option" value="' + currentQuestion.options[0] + '"> ' + currentQuestion.options[0] + '</label><br>' +
     '<label><input type="radio" name="option" value="' + currentQuestion.options[1] + '"> ' + currentQuestion.options[1] + '</label><br>' +
     '<label><input type="radio" name="option" value="' + currentQuestion.options[2] + '"> ' + currentQuestion.options[2] + '</label><br>' +
     '<label><input type="radio" name="option" value="' + currentQuestion.options[3] + '"> ' + currentQuestion.options[3] + '</label><br>';
 }
 
-// Check the answer
 function checkAnswer() {
   var selectedOption = document.querySelector('input[name="option"]:checked');
-
   if (!selectedOption) {
     alert("Please select an option!");
     return;
   }
 
   if (selectedOption.value === questions[currentQuestionIndex].correctAnswer) {
-    score++;
+    Score++;
   }
-
   currentQuestionIndex++;
-
   if (currentQuestionIndex < questions.length) {
     renderQuestion();
   } else {
@@ -175,20 +169,17 @@ function checkAnswer() {
   }
 }
 
-// Show the result
 function showResult() {
-  questionBox.textContent = "Quiz Complete!";
-  optionsBox.style.display = "none";
-  submitBtn.style.display = "none";
-  resultBox.textContent = "You scored " + score + " out of " + questions.length + "!";
+  QuestionBox.innerText = "Quiz Completed!!!!";
+  optionBox.style.display = "none";
+  submitButton.style.display = "none";
+  Result.innerText = "Congratulations!!🎉 You Scored " + Score + " out of " + questions.length + "!";
 }
 
-// Manually attach the function to the button in the HTML
-submitBtn.onclick = function () {
+submitButton.onclick = function () {
   checkAnswer();
 };
 
-// Initialize the quiz
 renderQuestion();
 
 function html() {

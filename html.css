@@ -8,7 +8,7 @@ h1{
 body{
     background-image: linear-gradient(to right, #434343 0%, black 100%);         background-repeat: no-repeat;
      background-size:contain;
-     height:150vh;
+     height:auto;
 }
 p{
     text-align: center;
@@ -35,7 +35,10 @@ p{
     font-weight: 600;
   }
   .question {
-    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(228, 15, 15);
+    font-weight: 700;
+    font-size: 35px;
   }
   .options {
     text-align: left;
