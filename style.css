@@ -96,8 +96,11 @@ ul li {
         background-color:black;
         text-align: center;
     }
-    img{
-       margin-left: 260px; 
+    #logo{
+       margin-left:10px; 
+       width:100px;
+       height:100px;
+
     }
     #navigation{
         display: flex;
@@ -127,7 +130,5 @@ ul li {
       flex-direction: column;
       text-align: center;
     }
-    h1,h2,h3{
-        margin-left:200px;
-    }
+   
   }
