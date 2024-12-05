@@ -96,10 +96,9 @@ ul li {
         background-color:black;
         text-align: center;
     }
-   
     #navigation{
         display: flex;
-        flex-direction: column;
+        flex-direction:row;
         gap:0px;
         text-align: center;
         width: 100%;
