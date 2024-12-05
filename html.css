@@ -39,6 +39,7 @@ p{
     color: greenyellow;
     font-weight: 700;
     font-size: 35px;
+    text-align:justify;
   }
   .options {
     text-align: left;

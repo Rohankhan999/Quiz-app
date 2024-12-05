@@ -1,78 +1,120 @@
-body{   
+body {
     background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
-   background-repeat: no-repeat;
-        width:100%;
-        height:100%;
-        overflow-x: hidden;
-        margin: auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 590px;
+    overflow-x: hidden;
+    margin: auto;
 }
-section{
+
+section {
     display: flex;
 }
-h1{
+
+h1 {
     font-family: "Roboto", serif;
     font-weight: 600;
-    letter-spacing: 2px;   
+    letter-spacing: 2px;
     color: whitesmoke;
     margin-left: 120px;
     margin-top: 100px;
-    
+
 }
-h2{
+
+h2 {
     color: whitesmoke;
     font-family: "Lobster", serif;
     letter-spacing: 3px;
     font-size: 35px;
     margin-left: 55px;
 }
-h4{
+
+h4 {
     font-family: "Roboto", serif;
     font-weight: 600;
-    letter-spacing: 2px;   
+    letter-spacing: 2px;
     color: whitesmoke;
     margin-left: 30px;
 }
-.left{
-    width:700px;
+
+.left {
+    width: 700px;
 }
-.right{
-    width:700px;
+
+.right {
+    width: 700px;
 }
-.box{
+
+.box {
     display: flex;
-    background-color:rgb(240, 129, 129);
-    width:350px;
+    background-color: rgb(240, 129, 129);
+    width: 350px;
     height: 60px;
     border-radius: 20px;
     margin-left: 140PX;
     margin-top: 50px;
-
+    cursor:pointer;
 }
-h3{
+
+h3 {
     font-family: "Poppins", serif;
     margin-left: 80px;
-    }
-    #click{
-        margin-left: 45px;
-        font-size:17px;
-        font-weight: 800;
-        color: aliceblue;
-    }
-    nav{
-        display: flex;
+}
+
+#click {
+    margin-left: 45px;
+    font-size: 17px;
+    font-weight: 800;
+    color: aliceblue;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+}
+
+ul li {
+    font-family: "Poppins", serif;
+    list-style: none;
+    color: whitesmoke;
+    float: left;
+    margin-top: 40px;
+    margin-left: 60px;
+    font-size: 20px;
+
+}
+
+#navigation {
+    display: flex;
+    gap: 350px;
+}
+@media only screen and (max-width: 440px) {
+    body{
         width:100%;
+        height: 100%;
+        background-image: none;
+        background-color:black;
+    }
+    #navigation{
+        display: flex;
+        flex-direction: column;
+        gap:0px;
+        text-align: center;
     }
     ul li{
         font-family: "Poppins", serif;
         list-style: none;
         color: whitesmoke;
-        float: left;
-        margin-top: 40px;
-        margin-left: 60px;
-        font-size:20px;
-        
+        font-size: 20px;
     }
-    #navigation{
+    nav{
         display: flex;
-        gap: 350px;
+        flex-direction:column;
     }
+    section{
+        width:100%;
+        height:100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
