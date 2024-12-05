@@ -127,7 +127,7 @@ ul li {
       flex-direction: column;
       text-align: center;
     }
-    h2{
-        margin-left:260px;
+    h1,h2,h3{
+        margin-left:200px;
     }
   }
