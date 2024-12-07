@@ -8,7 +8,7 @@ h1{
 body{
     background-image: linear-gradient(to right, #434343 0%, black 100%);         background-repeat: no-repeat;
      background-size:contain;
-     height:auto;
+     height:100%;
 }
 p{
     text-align: center;
