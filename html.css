@@ -1,15 +1,43 @@
 h1{ 
-    color:whitesmoke; 
+    color:rgb(246, 255, 0);
     text-align: center;
     font-family: "Sour Gummy", serif;
      letter-spacing: 3px;
      font-size: 44px;
     }
 body{
-    background-image: linear-gradient(to right, #434343 0%, black 100%);         background-repeat: no-repeat;
-     background-size:contain;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    width: 100%;
+     background-repeat: repeat;
      height:100%;
+     overflow-x: hidden;
 }
+nav {
+  display: flex;
+  width: 100%;
+  
+}
+
+ul li {
+  font-family: "Poppins", serif;
+  list-style: none;
+  color: whitesmoke;
+  float: left;
+  margin-top: 40px;
+  margin-left: 60px;
+  font-size: 20px;
+  cursor: pointer;
+}
+ul li:hover{
+  color: rgb(240, 129, 129);
+  transition: 1s;
+}
+
+#navigation {
+  display: flex;
+  gap: 350px;
+}
+
 p{
     text-align: center;
     font-family: "Roboto", serif;
@@ -25,12 +53,13 @@ p{
 }
 .quiz-container {
     max-width: 500px;
+    height:430px; 
     margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: rgba(144, 167, 163, 0.568);
-    margin-top: 50px;
+    margin-top: 20px;
     font-family: "Sour Gummy", serif;
     font-weight: 600;
   }
@@ -39,7 +68,7 @@ p{
     color: greenyellow;
     font-weight: 700;
     font-size: 35px;
-    text-align:justify;
+    text-align:left;
   }
   .options {
     text-align: left;

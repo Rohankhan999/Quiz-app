@@ -1,5 +1,5 @@
 h1{ 
-    color:whitesmoke; 
+  color:rgb(246, 255, 0); 
     text-align: center;
     font-family: "Sour Gummy", serif;
      letter-spacing: 3px;
@@ -9,6 +9,32 @@ body{
     background-image: linear-gradient(to right, #434343 0%, black 100%);         background-repeat: no-repeat;
      background-size:contain;
      height:100%;
+     overflow-x: hidden;
+}
+nav {
+  display: flex;
+  width: 100%;
+  
+}
+
+ul li {
+  font-family: "Poppins", serif;
+  list-style: none;
+  color: whitesmoke;
+  float: left;
+  margin-top: 40px;
+  margin-left: 60px;
+  font-size: 20px;
+  cursor: pointer;
+}
+ul li:hover{
+  color: rgb(240, 129, 129);
+  transition: 1s;
+}
+
+#navigation {
+  display: flex;
+  gap: 350px;
 }
 p{
     text-align: center;
@@ -39,7 +65,7 @@ p{
     color: greenyellow;
     font-weight: 700;
     font-size: 35px;
-    text-align:justify;
+    text-align:left;
   }
   .options {
     text-align: left;
